@@ -46,10 +46,10 @@ pipeline {
     stage('Update Deployment File') {
       environment {
         GIT_REPO_NAME = "DevOps-Project-springboot-app"
-        GIT_USER_NAME = "AmolJadhav97"
+        GIT_USER_NAME = "DevOps-Projects-by-Amol"
       }
       steps {
-        withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
+        withCredentials([string(credentialsId: 'githubnew', variable: 'GITHUB_TOKEN')]) {
           sh '''
             git config user.email "007asjadhav@gmail.com"
             git config user.name "AmolJadhav97"
